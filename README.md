@@ -21,6 +21,25 @@ sudo certbot certonly --manual -n --agree-tos -m <email address> --preferred-cha
 
 Be sure to update values for `<email address>` and `*.domain.tld`.
 
+### Example output
+
+```
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for *.domain.tld
+Hook '--manual-auth-hook' for domain.tld ran with output:
+ CERTBOT_DOMAIN: domain.tld
+ DOMAIN:
+ CERTBOT_VALIDATION: <txt record value>
+ Create TXT record
+ <SUCCESS CODE="200" TEXT="_acme-challenge.domain.tld TXT updated to <txt record value>" ZONE="domain.tld">
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/domain.tld/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/domain.tld/privkey.pem
+This certificate expires on <date>.
+These files will be updated when the certificate renews.
+```
+
 ## What do the files do?
 
 ### authenticator.sh
